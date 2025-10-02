@@ -6,16 +6,13 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({ label, color = "red" }: ButtonProps) => {
+const Button = ({ label, color = "red", onClick }: ButtonProps) => {
   const [bgColor, setBgColor] = useState(color);
 
   const handleClick = () => {
-    if (bgColor === "blue") {
-      setBgColor("red");
-    } 
-    if (bgColor === "red") {
-      setBgColor("blue");
-    }
+    setBgColor((prev) => (prev === "blue" ? "red" : "blue"));
+    // Gọi hàm từ cha (nếu có)
+    onClick?.();
   };
 
   return (
