@@ -32,25 +32,27 @@ function ListProduct() {
             <th scope="col">Ảnh</th>
             <th scope="col">Tên sản phẩm</th>
             <th scope="col">Giá</th>
-            <th scope="col" style={{ width: '150px' }}>Hành động</th>
+            <th scope="col" style={{ width: "150px" }}>
+              Hành động
+            </th>
           </tr>
         </thead>
         <tbody>
-          {products.map(product => (
+          {products.map((product) => (
             <tr key={product.id}>
               <th scope="row">{product.id}</th>
               <td>
-                <img src={`../src/assets/${product.image}`} alt={product.name} style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
+                <img
+                  src={`../src/assets/${product.image}`}
+                  alt={product.name}
+                  style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                />
               </td>
               <td>{product.name}</td>
-              <td>{product.price.toLocaleString('vi-VN')}đ</td>
+              <td>{product.price.toLocaleString("vi-VN")}đ</td>
               <td>
-                <button className="btn btn-warning btn-sm me-2" >
-                  <i className="bi bi-pencil-fill"></i> Sửa
-                </button>
-                <button className="btn btn-danger btn-sm" >
-                  <i className="bi bi-trash-fill"></i> Xóa
-                </button>
+                <button className="btn btn-warning btn-sm me-2">Sửa</button>
+                <button className="btn btn-danger btn-sm">Xóa</button>
               </td>
             </tr>
           ))}
