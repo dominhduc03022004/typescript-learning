@@ -84,5 +84,15 @@
             "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
             "image": "text_ng_n_-_2023-06-08t005130.908.webp" 
         }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Tin tức"
+        },
+        {
+            "id": 2,
+            "name": "Liên hệ"
+        }
     ]
 }

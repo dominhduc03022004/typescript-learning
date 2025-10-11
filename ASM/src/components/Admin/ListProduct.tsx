@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "../../types/Iproduct";
+import { Link } from "react-router-dom";
 
 function ListProduct() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -21,9 +22,9 @@ function ListProduct() {
     <>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h1>Quản lý Sản phẩm</h1>
-        <button className="btn btn-primary">
-          <i className="bi bi-plus-circle me-2"></i>Thêm sản phẩm
-        </button>
+        <Link to={`/admin/add_product`}>
+          <button className="btn btn-primary">Thêm sản phẩm</button>
+        </Link>
       </div>
       <table className="table table-striped table-hover shadow-sm">
         <thead className="table-dark">
@@ -51,7 +52,9 @@ function ListProduct() {
               <td>{product.name}</td>
               <td>{product.price.toLocaleString("vi-VN")}đ</td>
               <td>
-                <button className="btn btn-warning btn-sm me-2">Sửa</button>
+                <Link to={`/admin/edit_product/${product.id}`}>
+                  <button className="btn btn-warning btn-sm me-2">Sửa</button>
+                </Link>
                 <button className="btn btn-danger btn-sm">Xóa</button>
               </td>
             </tr>

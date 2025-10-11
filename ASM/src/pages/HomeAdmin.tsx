@@ -1,5 +1,6 @@
 import React from "react";
-import ListProduct from "../components/Admin/ListProduct";
+// import ListProduct from "../components/Admin/ListProduct";
+import { Outlet } from "react-router-dom";
 
 function HomeAdmin() {
   return (
@@ -11,21 +12,16 @@ function HomeAdmin() {
         <h3 className="text-center mb-4">Trang Admin</h3>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
-          <li>
-            <a href="#" className="nav-link active text-black">
-              Sản phẩm
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-black">
-              Đơn hàng
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link text-black">
-              Khách hàng
-            </a>
-          </li>
+            <li>
+              <a href="/admin/products" className="nav-link active text-black">
+                Sản phẩm
+              </a>
+            </li>
+            <li>
+              <a href="/admin/categories" className="nav-link text-black">
+                Danh mục
+              </a>
+            </li>
         </ul>
         <hr />
       </aside>
@@ -48,7 +44,7 @@ function HomeAdmin() {
           className="flex-grow-1 p-4"
           style={{ backgroundColor: "#e2e4e5ff" }}
         >
-          <ListProduct />
+          <Outlet />
         </main>
       </div>
     </div>
