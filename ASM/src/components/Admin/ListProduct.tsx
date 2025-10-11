@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { Product } from "../../types/Iproduct";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function ListProduct() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -18,6 +19,20 @@ function ListProduct() {
       }
     })();
   }, []);
+
+  const handleDelete = async (id: number) => {
+    try {
+      if (window.confirm("Ban co muon xoa khong?")) {
+        await axios.delete(" http://localhost:3000/products/" + id);
+        setProducts((productsPrev) => {
+          return productsPrev.filter((item) => item.id !== id);
+        });
+        toast.success("Xoa thanh cong");
+      }
+    } catch (error) {
+      toast.error((error as AxiosError).message)
+    }
+  };
   return (
     <>
       <div className="d-flex justify-content-between align-items-center mb-4">
@@ -55,7 +70,14 @@ function ListProduct() {
                 <Link to={`/admin/edit_product/${product.id}`}>
                   <button className="btn btn-warning btn-sm me-2">Sửa</button>
                 </Link>
-                <button className="btn btn-danger btn-sm">Xóa</button>
+                <button
+                  className="btn btn-danger btn-sm"
+                  onClick={() => {
+                    handleDelete(product.id);
+                  }}
+                >
+                  Xóa
+                </button>
               </td>
             </tr>
           ))}

@@ -1,98 +1,119 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Iphone 17 Pro Max 256GB | Chính hãng",
-            "price": 37990000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "iphone-17-pro-max_3.webp" 
-        },
-        {
-            "id": 2,
-            "name": "Samsung Galaxy S25 Ultra 12GB 256GB",
-            "price": 27180000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "dien-thoai-samsung-galaxy-s25-ultra_3__3.webp" 
-        },
-        {
-            "id": 3,
-            "name": "Iphone Air 256GB | Chính hãng",
-            "price": 31990000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "iphone_air-3_2.webp" 
-        },
-        {
-            "id": 4,
-            "name": "Xiaomi 15T 5G 12GB 512GB",
-            "price": 14990000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "xiaomi-15t-5g-22.webp" 
-        },
-        {
-            "id": 5,
-            "name": "iPad Air 11 inch M3 Wifi 128GB 2025 | Chính hãng Apple Việt Nam",
-            "price": 16190000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "ipad-air-11-wifi-1.webp" 
-        },
-        {
-            "id": 6,
-            "name": "Máy tính bảng Lenovo Idea Tab Wifi 4GB 128GB ZAFR0484VN kèm bút",
-            "price": 5590000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "image_1425_2.webp" 
-        },
-        {
-            "id": 7,
-            "name": "Samsung Galaxy Tab S10 Lite Wifi 6GB 128GB",
-            "price": 8490000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "samsung-galaxy-tab-s10-lite-wifi-gray.webp" 
-        },
-        {
-            "id": 8,
-            "name": "Huawei MatePad SE 11 inch 6GB 128GB",
-            "price": 4700000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "may-tinh-bang-huawei-matepad-se-11-inch-co-but.webp" 
-        },
-        {
-            "id": 9,
-            "name": "Laptop Gaming Acer Nitro V 15 ProPanel ANV15-41-R7AP",
-            "price": 17690000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "group_619.webp" 
-        },
-        {
-            "id": 10,
-            "name": "Laptop Lenovo IdeaPad Slim 3 15ABR8 82XM00MDVN",
-            "price": 12490000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "group_659_4.webp" 
-        },
-        {
-            "id": 11,
-            "name": "MacBook Air M4 13 inch 2025 10CPU 8GPU 16GB 256GB | Chính hãng Apple Việt Nam",
-            "price": 25090000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "macbook_11_1.webp" 
-        },
-        {
-            "id": 12,
-            "name": "Laptop ASUS Vivobook Go 15 E1504GA-BQ1141W",
-            "price": 9490000,
-            "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
-            "image": "text_ng_n_-_2023-06-08t005130.908.webp" 
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Tin tức"
-        },
-        {
-            "id": 2,
-            "name": "Liên hệ"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 17 Pro Max 256GB | Chính hãng",
+      "price": 37990000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "iphone-17-pro-max_3.webp"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S25 Ultra 12GB 256GB",
+      "price": 27180000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "dien-thoai-samsung-galaxy-s25-ultra_3__3.webp"
+    },
+    {
+      "id": 3,
+      "name": "Iphone Air 256GB | Chính hãng",
+      "price": 31990000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "iphone_air-3_2.webp"
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi 15T 5G 12GB 512GB",
+      "price": 14990000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "xiaomi-15t-5g-22.webp"
+    },
+    {
+      "id": 5,
+      "name": "iPad Air 11 inch M3 Wifi 128GB 2025 | Chính hãng Apple Việt Nam",
+      "price": 16190000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "ipad-air-11-wifi-1.webp"
+    },
+    {
+      "id": 6,
+      "name": "Máy tính bảng Lenovo Idea Tab Wifi 4GB 128GB ZAFR0484VN kèm bút",
+      "price": 5590000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "image_1425_2.webp"
+    },
+    {
+      "id": 7,
+      "name": "Samsung Galaxy Tab S10 Lite Wifi 6GB 128GB",
+      "price": 8490000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "samsung-galaxy-tab-s10-lite-wifi-gray.webp"
+    },
+    {
+      "id": 8,
+      "name": "Huawei MatePad SE 11 inch 6GB 128GB",
+      "price": 4700000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "may-tinh-bang-huawei-matepad-se-11-inch-co-but.webp"
+    },
+    {
+      "id": 9,
+      "name": "Laptop Gaming Acer Nitro V 15 ProPanel ANV15-41-R7AP",
+      "price": 17690000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "group_619.webp"
+    },
+    {
+      "id": 10,
+      "name": "Laptop Lenovo IdeaPad Slim 3 15ABR8 82XM00MDVN",
+      "price": 12490000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "group_659_4.webp"
+    },
+    {
+      "id": 11,
+      "name": "MacBook Air M4 13 inch 2025 10CPU 8GPU 16GB 256GB | Chính hãng Apple Việt Nam",
+      "price": 25090000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "macbook_11_1.webp"
+    },
+    {
+      "id": 12,
+      "name": "Laptop ASUS Vivobook Go 15 E1504GA-BQ1141W",
+      "price": 9490000,
+      "description": "Tặng Sim/Esim VNSKY, có ngay 5GB data 5G/ngày, miễn phí 30 ngày đầu - chỉ áp dụng tại cửa hàng",
+      "image": "text_ng_n_-_2023-06-08t005130.908.webp"
+    },
+    {
+      "name": "iPhone 17",
+      "price": 20000000,
+      "description": "Sản phẩm mới nhất của nhà Apple được ra mắt, giá sản phẩm siêu rẻ",
+      "image": "iphone17.png",
+      "id": 13
+    },
+    {
+      "name": "iPhone 17",
+      "price": 23999999,
+      "description": "Đẹp",
+      "image": "iphone17.png",
+      "id": 14
+    },
+    {
+      "name": "adasd",
+      "price": 13131221,
+      "description": "asdadas",
+      "image": "adadadas",
+      "id": 15
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Tin tức"
+    },
+    {
+      "id": 2,
+      "name": "Liên hệ"
+    }
+  ]
 }
