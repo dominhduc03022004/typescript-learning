@@ -1,29 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ProductFormData, productSchema } from "../types/product.schema";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
-  const [name, setName] = useState<string>("");
-  const [price, setPrice] = useState<number>();
-  const [description, setDescription] = useState<string>("");
-  const [image, setImage] = useState<string>("");
+  const navigate = useNavigate();
 
-  const navi = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ProductFormData>({
+    resolver: zodResolver(productSchema),
+  });
 
-  const AddProduct = async (e:any) => {
-    console.log(e);
-    
-    e.preventDefault();
-    const productData = { name, price, description, image };
+  const onSubmit = async (data: ProductFormData) => {
     try {
-      await axios.post(`http://localhost:3000/products`, productData);
-      alert("Them san pham thanh cong~");
-      navi("/admin/products");
+      await axios.post("http://localhost:3000/products", data);
+      toast.success("Thêm sản phẩm thành công!");
+      reset();
+      navigate("/admin/products");
     } catch (error) {
-      console.log("error: ", error);
-      alert("Them san pham that bai");
+      console.error(error);
+      toast.error("Lỗi khi thêm sản phẩm!");
     }
   };
+
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -32,21 +38,27 @@ function AddProduct() {
             <div className="card-header bg-dark text-white">
               <h2 className="mb-0">Thêm Sản Phẩm Mới</h2>
             </div>
+
             <div className="card-body">
-              <form onSubmit={AddProduct}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label fw-bold">
                     Tên sản phẩm
                   </label>
                   <input
                     id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className={`form-control ${
+                      errors.name ? "is-invalid" : ""
+                    }`}
                     placeholder="Ví dụ: iPhone 17"
-                    required
+                    {...register("name")}
                   />
+                  {errors.name && (
+                    <div className="invalid-feedback">
+                      {errors.name.message}
+                    </div>
+                  )}
                 </div>
                 <div className="mb-3">
                   <label htmlFor="price" className="form-label fw-bold">
@@ -54,47 +66,64 @@ function AddProduct() {
                   </label>
                   <input
                     id="price"
-                    value={price}
-                    onChange={(e) => setPrice(Number(e.target.value))}
                     type="number"
-                    className="form-control"
+                    className={`form-control ${
+                      errors.price ? "is-invalid" : ""
+                    }`}
                     placeholder="Ví dụ: 35000000"
-                    required
+                    {...register("price", { valueAsNumber: true })}
                   />
+                  {errors.price && (
+                    <div className="invalid-feedback">
+                      {errors.price.message}
+                    </div>
+                  )}
                 </div>
-
                 <div className="mb-3">
                   <label htmlFor="description" className="form-label fw-bold">
                     Mô tả
                   </label>
                   <textarea
                     id="description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    className="form-control"
                     rows={4}
+                    className={`form-control ${
+                      errors.description ? "is-invalid" : ""
+                    }`}
                     placeholder="Nhập mô tả chi tiết cho sản phẩm..."
-                    required
+                    {...register("description")}
                   ></textarea>
+                  {errors.description && (
+                    <div className="invalid-feedback">
+                      {errors.description.message}
+                    </div>
+                  )}
                 </div>
-
                 <div className="mb-3">
                   <label htmlFor="image" className="form-label fw-bold">
                     Tên file hình ảnh
                   </label>
                   <input
                     id="image"
-                    value={image}
-                    onChange={(e) => setImage(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className={`form-control ${
+                      errors.image ? "is-invalid" : ""
+                    }`}
                     placeholder="Ví dụ: iphone17.png"
-                    required
+                    {...register("image")}
                   />
+                  {errors.image && (
+                    <div className="invalid-feedback">
+                      {errors.image.message}
+                    </div>
+                  )}
                 </div>
                 <div className="d-grid">
-                  <button type="submit" className="btn btn-dark btn-lg">
-                    THÊM SẢN PHẨM
+                  <button
+                    type="submit"
+                    className="btn btn-dark btn-lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Đang thêm..." : "THÊM SẢN PHẨM"}
                   </button>
                 </div>
               </form>
